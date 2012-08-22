@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+
+<h2>Admin</h2>
+
+<h3>Post</h3>
+<div>
+    <form method="post" action="{{ path('post', { action: 'add', id: 0 }) }}">
+        <label>
+            Title:
+            <input type="text" name="title">
+        </label>
+        <label>
+            Content:
+            <textarea rows="10" cols="10" name="content"></textarea>
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<a href="{{ path('logout') }}">Logout</a>
+
+{% endblock %}

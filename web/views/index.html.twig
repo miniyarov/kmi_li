@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+<div id="header"></div>
+
+<div id="content">
+    <div class="cell2">
+        Komili, Türkiye’nin en lezzetli sofralarını sizlerle beraber kuruyor.
+        Lezzetli yemekleriniz ve sevdiklerinizle dolu sofranızın fotoğrafını bizlerle paylaşın, sofralarınızı süsleyecek hediyeler kazanın.<br/>
+        Her hafta en beğenilen 5 fotoğrafı yollayan kişilere, Komili’den 200 TL’lik altıncıcadde.com çeki hediye.<br/>
+        Yapmanız gereken çok kolay.
+    </div>
+    <div class="cell">
+        <a href="{{ path('nasil_katilirim') }}" class="how"></a>
+        <a href="{{ path('hemen_katil') }}" class="join"></a>
+    </div>
+</div>
+{% endblock %}

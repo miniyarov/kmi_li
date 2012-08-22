@@ -1,0 +1,133 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+<input type="hidden" id="nowsub" value="">
+<div id="top">
+    <div class="con">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</div>
+<div id="middle2">
+    <div class="con">
+        <div style="width:1100px; height:22px; margin:0px auto; position:absolute; top:593px; z-index:9999; text-align:center; padding-top:8px; font-size:13px; color:#000; text-shadow:#fff 1px 1px 2px">Şimdi lezzetli sofranızı kuracağınız şehri/yeri haritadan seçin.</div>
+        <div style="width:1020px; height:458px; float:left; margin:36px 0 0 40px;">
+            {% for i in 1..16 %}
+                {% if box[i] is defined %}
+                    <a id="b{{ i }}" href="#photo_sum" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" class="inline map{{ i }}" style="background:url(img/map/{{ i }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i }}" href="#photo_sum" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" class="inline map{{ i }}"></a>
+                {% endif %}
+            {% endfor %}
+
+            <a href="#photo_sum" class="inline map" {% if box[17] is defined %}style="background:url(boxes/17.jpg);"{% endif %}></a>
+            <a href="#photo_sum" class="inline map" {% if box[18] is defined %}style="background:url(boxes/18.jpg);"{% endif %}></a>
+
+            {% for i in 17..31 %}
+                {% if box[i+2] is defined %}
+                    <a id="b{{ i+2 }}" href="#photo_sum" data-parameter='{ "boxid": "{{ i+2 }}" }' data-url="{{ path('show_boxes') }}" class="inline map{{ i }}" style="background:url(boxes/{{ i+2 }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i+2 }}" href="#photo_sum" data-parameter='{ "boxid": "{{ i+2 }}" }' data-url="{{ path('show_boxes') }}" class="inline map{{ i }}"></a>
+                {% endif %}
+            {% endfor %}
+
+            {% for i in 34..46 %}
+                {% if box[i] is defined %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i }}" style="background:url(boxes/{{ i }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map"></a>
+                {% endif %}
+            {% endfor %}
+
+            {% for i in 47..49 %}
+                {% if box[i-15] is defined %}
+                    <a id="b{{ i-15 }}" data-parameter='{ "boxid": "{{ i-15 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-15 }}" style="background:url(boxes/{{ i-15 }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i-15 }}" data-parameter='{ "boxid": "{{ i-15 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-15 }}"></a>
+                {% endif %}
+            {% endfor %}
+
+            {% for i in 50..66 %}
+                {% if box[i] is defined %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map" style="background:url(boxes/{{ i }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map"></a>
+                {% endif %}
+            {% endfor %}
+
+            {% for i in 66..68 %}
+                {% if box[i-31] is defined %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-31 }}" style="background:url(boxes/{{ i-31 }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i-31 }}" data-parameter='{ "boxid": "{{ i-31 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-31 }}"></a>
+                {% endif %}
+            {% endfor %}
+
+            {% for i in 69..84 %}
+                {% if box[i] is defined %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map" style="background:url(boxes/{{ i }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map"></a>
+                {% endif %}
+            {% endfor %}
+
+            {% for i in 85..89 %}
+                {% if box[i-47] is defined %}
+                    <a id="b{{ i-47 }}" data-parameter='{ "boxid": "{{ i-47 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-47 }}" style="background:url(boxes/{{ i-47 }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i-47 }}" data-parameter='{ "boxid": "{{ i-47 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-47 }}"></a>
+                {% endif %}
+            {% endfor %}
+
+            {% for i in 90..104 %}
+                {% if box[i] is defined %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map" style="background:url(boxes/{{ i }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map"></a>
+                {% endif %}
+            {% endfor %}
+
+            <a id="b105" data-parameter='{ "boxid": "105" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map43" {% if box[105] is defined %}style="background:url(boxes/105.jpg);"{% endif %}></a>
+            <a id="b106" data-parameter='{ "boxid": "106" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map" {% if box[106] is defined %}style="background:url(boxes/106.jpg);"{% endif %}></a>
+            <a id="b107" data-parameter='{ "boxid": "107" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map44" {% if box[107] is defined %}style="background:url(boxes/107.jpg);"{% endif %}></a>
+            <a id="b108" data-parameter='{ "boxid": "108" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map45" {% if box[108] is defined %}style="background:url(boxes/108.jpg);"{% endif %}></a>
+
+            {% for i in 109..122 %}
+                {% if box[i] is defined %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map" style="background:url(boxes/{{ i }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i }}" data-parameter='{ "boxid": "{{ i }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map"></a>
+                {% endif %}
+            {% endfor %}
+
+            {% for i in 123..128 %}
+                {% if box[i-77] is defined %}
+                    <a id="b{{ i-77 }}" data-parameter='{ "boxid": "{{ i-77 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-77 }}" style="background:url(boxes/{{ i-77 }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i-77 }}" data-parameter='{ "boxid": "{{ i-77 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-77 }}"></a>
+                {% endif %}
+            {% endfor %}
+
+            <a id="b129" data-parameter='{ "boxid": "129" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map" {% if box[129] is defined %}style="background:url(boxes/129.jpg);"{% endif %}></a>
+
+            {% for i in 130..132 %}
+                {% if box[i-77] is defined %}
+                    <a id="b{{ i-78 }}" data-parameter='{ "boxid": "{{ i-78 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-78 }}" style="background:url(boxes/{{ i-78 }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i-78 }}" data-parameter='{ "boxid": "{{ i-78 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-78 }}"></a>
+                {% endif %}
+            {% endfor %}
+
+            <a id="b133" data-parameter='{ "boxid": "133" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map" {% if box[133] is defined %}style="background:url(boxes/133.jpg);"{% endif %}></a>
+
+            {% for i in 134..147 %}
+                {% if box[i-79] is defined %}
+                    <a id="b{{ i-79 }}" data-parameter='{ "boxid": "{{ i-79 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-79 }}" style="background:url(boxes/{{ i-79 }}.jpg);"></a>
+                {% else %}
+                    <a id="b{{ i-79 }}" data-parameter='{ "boxid": "{{ i-79 }}" }' data-url="{{ path('show_boxes') }}" href="#photo_sum" class="inline map{{ i-79 }}"></a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<?php
+
+$config_database = array(
+        'db.options' => array(
+            'driver' => 'pdo_mysql',
+            'dbname' => 'silex',
+            'host' => 'localhost',
+            'user' => 'root',
+            'password' => ''
+        )
+    );
+
+define('FACEBOOK_APPID', 'YOUR_APPID');
+define('FACEBOOK_APPSECRET', 'YOUR_SECRET');

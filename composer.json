@@ -1,0 +1,11 @@
+{
+    "require": {
+        "silex/silex": "1.0.*",
+        "twig/twig": ">=1.8, <2.0-dev",
+        "symfony/twig-bridge": "2.1.*",
+        "doctrine/dbal": "2.2.*",
+        "facebook/php-sdk": "*"
+
+    },
+    "minimum-stability": "dev"
+}

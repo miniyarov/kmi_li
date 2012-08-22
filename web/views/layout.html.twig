@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}Türkiyenin En Lezzetli Sofraları - Komili{% endblock %}</title>
+    <link rel="stylesheet" href="css/colorbox.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/fonts.css" type="text/css" charset="utf-8" />
+    <script>
+        $(document).ready(function(){
+            $(".ajax").colorbox();
+            $(".inline").colorbox({
+                overlayClose: false,
+                inline: true,
+                onLoad: function() {
+                    $('#sub_boxes').html('Yukleniyor...');
+                },
+                onOpen: function() {
+                    var parameter = $(this).data('parameter');
+                    var url = $(this).data('url');
+
+                    $.get(url, parameter, function(data) {
+                        $('#sub_boxes').html(data);
+                    });
+                },
+                onClosed: function () {
+                    $('#sub_boxes').html('');
+                }
+            });
+        });
+        function closeBox() {
+            $.colorbox.close();
+        }
+    </script>
+    <style type="text/css">
+        {% for i in 1..68 %}
+            .map{{ i }}:hover { opacity: 0.5; filter:alpha(opacity=50); }
+        {% endfor %}
+        .map {width:49px; height:49px; margin:1px; float:left; background:#dac27a;}
+        .map:hover {opacity:0.5; filter:alpha(opacity=50);}
+
+        {% for i in 1..3 %}
+            .map{{ i }} {width:49px; height:49px; margin:1px; float:left; background:url(img/map/none/m_{{ i }}.jpg) no-repeat;}
+        {% endfor %}
+
+        .map4 {width:49px; height:49px; margin:1px 1px 1px 154px; float:left; background:url(img/map/none/m_4.jpg) no-repeat;}
+
+        {% for i in 5..7 %}
+            .map{{ i }} {width:49px; height:49px; margin:1px; float:left; background:url(img/map/none/m_{{ i }}.jpg) no-repeat;}
+        {% endfor %}
+
+        .map8 {width:49px; height:49px; margin:1px 1px 1px 307px; float:left; background:url(img/map/none/m_8.jpg) no-repeat;}
+        .map9 {width:49px; height:49px; margin:1px 101px 1px 1px; float:left; background:url(img/map/none/m_9.jpg) no-repeat;}
+
+        {% for i in 10..25 %}
+            .map{{ i }} {width:49px; height:49px; margin:1px; float:left; background:url(img/map/none/m_{{ i }}.jpg) no-repeat;}
+        {% endfor %}
+
+        .map26 {width:49px; height:49px; margin:1px 51px 1px 1px; float:left; background:url(img/map/none/m_26.jpg) no-repeat;}
+
+        {% for i in 27..44 %}
+            .map{{ i }} {width:49px; height:49px; margin:1px; float:left; background:url(img/map/none/m_{{ i }}.jpg) no-repeat;}
+        {% endfor %}
+        .map45 {width:49px; height:49px; margin:1px 1px 1px 52px; float:left; background:url(img/map/none/m_45.jpg) no-repeat;}
+
+        {% for i in 46..49 %}
+            .map{{ i }} {width:49px; height:49px; margin:1px; float:left; background:url(img/map/none/m_{{ i }}.jpg) no-repeat;}
+        {% endfor %}
+
+        .map50 {width:49px; height:49px; margin:1px 1px 1px 52px; float:left; background:url(img/map/none/m_50.jpg) no-repeat;}
+
+        {% for i in 51..61 %}
+            .map{{ i }} {width:49px; height:49px; margin:1px; float:left; background:url(img/map/none/m_{{ i }}.jpg) no-repeat;}
+        {% endfor %}
+
+        .map62 {width:49px; height:49px; margin:1px 204px 1px 1px; float:left; background:url(img/map/none/m_62.jpg) no-repeat;}
+        .map63 {width:49px; height:49px; margin:1px 1px 1px 154px; float:left; background:url(img/map/none/m_63.jpg) no-repeat;}
+        .map64 {width:49px; height:49px; margin:1px 1px 1px 1px; float:left; background:url(img/map/none/m_64.jpg) no-repeat;}
+        .map65 {width:49px; height:49px; margin:1px 1px 1px 52px; float:left; background:url(img/map/none/m_65.jpg) no-repeat;}
+        .map66 {width:49px; height:49px; margin:1px 1px 1px 1px; float:left; background:url(img/map/none/m_66.jpg) no-repeat;}
+        .map67 {width:49px; height:49px; margin:1px 1px 1px 1px; float:left; background:url(img/map/none/m_67.jpg) no-repeat;}
+        .map68 {width:49px; height:49px; margin:1px 1px 1px 52px; float:left; background:url(img/map/none/m_68.jpg) no-repeat;}
+    </style>
+</head>
+<body>
+
+{% block body %}{% endblock %}
+
+<div id="footer">
+    <a href="{{ path('homepage') }}">Ana Sayfa</a>
+    <a href="{{ path('nasil_katilirim') }}">Nasıl Katılırım?</a>
+    <a href="{{ path('hemen_katil') }}">Hemen Katıl</a>
+    <a href="#">Katılım Koşulları</a>
+    <a href="#">Gizlilik</a>
+    <a href="#">İletişim</a>
+</div>
+
+<div style="display:none">
+    <div id="photo_sum">
+        <div id="box_con">
+            <a href="javascript:closeBox();" id="close"></a>
+            <div id="sub_boxes" class="box"></div>
+        </div>
+    </div>
+</div>
+
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '{{ app.facebook.appId }}', // App ID
+            //channelUrl : '//ulug.bek/channel.html', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+        });
+        FB.Event.subscribe('auth.login', function(response) {
+            window.location.reload();
+        });
+    };
+    // Load the SDK Asynchronously
+    (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+</script>
+</body>
+</html>

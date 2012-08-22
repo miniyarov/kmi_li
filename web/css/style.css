@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background:url(../img/bg.jpg) top; margin:0px auto; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+
+
+#header { width:628px; height:330px; background:url(../img/tels.jpg) no-repeat top center; overflow:hidden; margin:25px auto;}
+
+#content { width:100%; height:auto; margin-top:15px; overflow:hidden;}
+
+#content .cell { width:750px; height:auto; overflow:hidden; margin:0px auto;}
+#content .cell2 { width:600px; height:auto; overflow:hidden; margin:0px auto; line-height:20px; font-size:12px; color:#FFF; text-shadow:#000 1px 1px 2px}
+#content .cell .how { width:302px; height:218px; background:url(../img/how.png) no-repeat; float:left; margin:0 0 60px 50px;}
+#content .cell .join { width:302px; height:218px; background:url(../img/join.png) no-repeat; float:left; margin:0 0 60px 50px;}
+
+.txt24 {line-height:24px; text-align:justify; font-family:'Conv_AbakuTLSymSans-Regular',Sans-Serif; font-size:16px; color:#FFF; text-shadow:#000 1px 1px 2px}
+.txt20 {line-height:20px; font-size:12px; color:#11532d; text-shadow:#FFF 1px 1px 2px}
+
+#topname {width:100%; height:50px; overflow:hidden; top:0px; margin:0px auto; z-index:999; position:absolute}
+#topname .top { width:302px; height:34px; padding-top:8px; overflow:hidden; margin:0px auto; background:url(../img/topname.jpg) no-repeat; text-align:center } 
+#topname .top span { font-size:12px; color:#000; text-shadow:#FFF 1px 1px 2px}
+#topname .top a { font-size:12px; color:#000; text-shadow:#FFF 1px 1px 2px; text-decoration:none}
+
+#top { width:100%; height:70px; margin-top:10px; overflow:hidden;}
+#top .con { width:800px; height:70px; overflow:hidden; margin:0px auto;}
+#top .con .left { width:188px; height:66px; background:url(../img/tels_s.jpg) no-repeat; margin:5px 0 0 30px; float:left}
+#top .con .right { width:188px; height:66px; background:url(../img/kml.jpg) no-repeat; margin:5px 30px 0 0px; float:right}
+
+#middle { width:100%; height:531px; position:absolute; margin-top:100px; z-index:9;}
+#middle .conbg { width:1030px; height:426px; overflow:hidden; margin:0px auto; padding:35px;}
+#middle .conbg .px { width:3px; height:3px; margin:1px; background:#FFF; float:left; cursor:pointer;}
+#middle .conbg .over { background:#11532d;}
+#middle .conbg .px:hover { background:#000;}
+
+#middle2 {width:100%; height:591px; overflow:hidden; margin-top:15px;}
+#middle2 .con { width:1100px; height:591px; overflow:hidden; margin:0px auto; background:url(../img/map/bg.jpg) no-repeat}
+
+#container { width:100%; height:450px; margin-top:15px; overflow:hidden;}
+#example, #slides {width:901px; height:450px; overflow:hidden; margin:0px auto;}
+.slides_container { width:901px; height:450px; background:url(../img/how_bg.jpg) no-repeat center; overflow:hidden; margin:0px auto; display:none }
+.slides_container img { width:901px; height:450px; display:block; }
+
+#joinbox { width:100%; height:35px; margin-top:35px; overflow:hidden; text-align:center;}
+#joinbox .con { width:169px; height:35px; overflow:hidden; margin:0px auto;}
+#joinbox .con .join {width:169px; height:25px; float:left; background:url(../img/jointxt.jpg) no-repeat center;}
+#joinbox .con .join:hover {background:url(../img/jointxt_h.jpg) no-repeat center;}
+
+#photo_yes, #photo_login, #photo_no, #photo_sum, #photo_crop, #photo_face, #photo_finish, #prepare { width:689px; height:689px; background:url(../img/photobox_bg.png) no-repeat center; overflow-y:hidden; overflow-x:hidden; margin:0px auto;}
+#close { width:38px; height:38px; float:right; background:url(../img/kapa.jpg) no-repeat; margin:5px;}
+#close:hover { background:url(../img/kapa_h.jpg) no-repeat}
+#box_con { width:653px; height:653px; padding:18px; overflow:hidden;}
+#box_con .cell { width:550px; height:51px; margin-left:51px; float:left;}
+#box_con .cell .like { width:42px; height:51px; background:url(../img/like.jpg) no-repeat; float:left;}
+#box_con .cell .like:hover { background:url(../img/unlike.jpg) no-repeat;}
+#box_con .cell .comment { width:42px; height:51px; background:url(../img/comment.jpg) no-repeat; float:left;}
+#box_con .cell span { padding:13px 0 0 8px; font-family:'Conv_AbakuTLSymSans-Regular',Sans-Serif; float:left; height:38px; width:500px;}
+
+#box_con .box { width:550px; height:550px; margin:60px 0 0 51px; float:left;}
+#box_con .box .b { width:49px; height:49px; margin:2px; background:#dac27a; float:left;}
+#box_con .box .b:hover { opacity:0.5; filter:alpha(opacity=50);}
+
+#box_con .photo { width:550px; height:550px; margin-left:50px; float:left;}
+#box_con .photo .kom { width:550px; height:143px; margin-top:407px; position:absolute; z-index:99; background:url(../img/photo_bg.png) no-repeat;}
+
+#box_con .center { width:567px; height:auto; margin:30px 43px; float:left;}
+#box_con .center .s { width:547px; height:35px; margin-top:15px; float:left;}
+#box_con .center .l { width:225px; height:200px; float:left;}
+#box_con .center .r { width:300px; height:auto; float:left; margin:25px 0 0 10px; text-align:justify; font-size:12px}
+#box_con .center .p { width:547px; height:450px; background:#CCC; float:left}
+#box_con .center .t { width:547px; height:auto; float:left; margin:15px 0px;}
+#box_con .center .f { width:305px; height:305px; border:10px solid #11532d; margin-left:111px; float:left}
+#box_con .center .b { width:567px; height:50px; margin-top:10px; float:left; text-align:center;}
+#box_con .center .c { width:567px; height:50px; margin-top:10px; float:left; text-align:center;}
+#box_con .center  .comp { width:158px; height:38px; float:left; margin-left:99px; background:url(../img/cmtan.jpg) no-repeat; cursor:pointer}
+#box_con .center  .comp:hover { background:url(../img/cmtan_h.jpg) no-repeat;}
+#box_con .center  .yd { width:62px; height:38px; float:left; background:url(../img/yada.jpg) no-repeat;}
+#box_con .center  .login { width:208px; height:38px; float:left; margin-left:160px; background:url(../img/baglan.jpg) no-repeat;cursor:pointer}
+#box_con .center  .login:hover { background:url(../img/baglan_h.jpg) no-repeat;}
+#box_con .center  .face { width:158px; height:38px; float:left; background:url(../img/fctan.jpg) no-repeat; cursor:pointer;}
+#box_con .center  .face:hover { background:url(../img/fctan_h.jpg) no-repeat;}
+#box_con .center  .upload { width:158px; height:38px; float:left; margin-left:150px; background:url(../img/secyukle.jpg) no-repeat;}
+#box_con .center  .upload:hover { background:url(../img/secyukle_h.jpg) no-repeat;}
+#box_con .center  .back { width:98px; height:38px; float:left; background:url(../img/geridon.jpg) no-repeat;}
+#box_con .center  .back:hover { background:url(../img/geridon_h.jpg) no-repeat;}
+#box_con .center  .save { width:98px; height:38px; float:left; margin-left:185px; background:url(../img/kaydet.jpg) no-repeat;}
+#box_con .center .b .save:hover { background:url(../img/kaydet_h.jpg) no-repeat;}
+#box_con .center .b .copy { width:98px; height:38px; float:left; margin-left:185px; background:url(../img/kopyala.jpg) no-repeat;}
+#box_con .center .b .copy:hover { background:url(../img/kopyala_h.jpg) no-repeat;}
+#box_con .center .b .share { width:98px; height:38px; float:left; background:url(../img/paylas.jpg) no-repeat;}
+#box_con .center .b .share:hover { background:url(../img/paylas_h.jpg) no-repeat;}
+#box_con .center .b .text { width:515px; height:24px; padding:15px; background:url(../img/yorum.jpg) no-repeat; float:left; margin-left:1px; border:0px; font-size:16px; text-transform: none;}
+
+
+#footer { background:url(../img/footer_bg.jpg); width:100%; height:35px; position:fixed; bottom:0px; display:inherit }
+#footer a { padding:10px 16px 0 16px; height:25px; width:auto; float:left; font-family:'Conv_AbakuTLSymSans-Regular',Sans-Serif; font-size:16px; border-right:1px solid #FFF; text-decoration:none; color:#11532d }
+#footer a:hover { color:#FFF; background:#14572f}
+
+
+/*
+	Pagination
+*/
+.pagination {
+	margin:26px auto 0;
+	width:100px;
+}
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../img/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+.pagination li.current a {
+	background-position:0 -12px;
+}

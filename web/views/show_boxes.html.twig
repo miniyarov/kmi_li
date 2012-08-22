@@ -1,0 +1,54 @@
+{% for i in 1..100 %}
+    {% spaceless %}
+    <a id="s{{ i }}" href="#photo_sum" class="inline b"
+        {% if photos[i] is defined %}
+            style="background:url('lastmini/{{ boxid }}_{{ i }}.jpg')"
+            data-url="{{ path('show_photo') }}"
+        {% else %}
+            data-url="{{ path('photo_upload') }}"
+        {% endif %}
+        data-parameter='{ "boxid": "{{ boxid }}", "subid": "{{ i }}" }'></a>
+    {% endspaceless %}
+{% endfor %}
+<div style="width:531px; height:22px; margin:0px auto; position:absolute; top:610px; z-index:9999; text-align:center; padding-top:8px; font-size:13px; color:#000; text-shadow:#fff 1px 1px 2px">Fotoğraf yüklemek için; boş karenin üstüne hemen tıkla!</div>
+<script>
+    $(document).ready(function(){
+        $(".ajax").colorbox();
+        $(".inline").colorbox({
+            overlayClose: false,
+            inline: true,
+            onLoad: function() {
+                $('#sub_boxes').html('Yukleniyor...');
+            },
+            onOpen: function() {
+                var parameter = $(this).data('parameter');
+                var url = $(this).data('url');
+
+                $.get(url, parameter, function(data) {
+                    $('#sub_boxes').html(data);
+                });
+            },
+            onClosed: function () {
+                $('#sub_boxes').html('');
+            }
+        });
+    });
+    function closeBox() {
+        $.colorbox.close();
+    }
+</script>
+<div class="center" style="margin:0px;">
+    <div class="s"><img src="img/tbrklr.jpg" border="0" /></div>
+    <div class="l"><img src="img/bsicon.jpg" border="0" /></div>
+    <div class="r txt20">Hemen lezzetli sofranızın fotoğrafını paylaşıp, birbirinden lezzetli hediyeler kazanabilirsiniz.<br/>Lezzetli sofra resminizi ister bilgisayarınızdan, ister facebook albümünüzden seçin.</div>
+    <div class="c" style="background:none;">
+        <a href="#" onclick="comp(); return false;" class="inline4 comp"></a>
+        <div class="yd"></div>
+        <a onclick="facephotos(); return false;" class="inline face"></a>
+
+        <a onclick="oncekayit(); return false;" class="inline4 comp"></a>
+        <div class="yd"></div>
+        <a onclick="oncekayit(); return false;" class="inline face"></a>
+    </div>
+    <div class="s"><img src="img/odllr.jpg" border="0" /></div>
+</div>
